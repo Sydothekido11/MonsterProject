@@ -23,7 +23,13 @@ public class MarshmallowMonster
 			this.monsterHair = monsterHair;
 			this.monsterBellyButton = monsterBellyButton;
 			
+		}
+		
+		public String toString()
+		{
+			String monsterInfo = "My monster has " + monsterLegs + "legs and its name is " + monsterName;
 			
+			return monsterInfo;
 		}
 }
 
