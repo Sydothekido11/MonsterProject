@@ -10,7 +10,7 @@ public class MarshmallowController
 	
 	public MarshmallowController()
 	{
-		String name = "";
+		String name = "Renald O'Squam";
 		int eyes = 2;
 		int noses = 0;
 		double legs = 2.0;
