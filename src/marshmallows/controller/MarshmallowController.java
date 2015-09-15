@@ -38,5 +38,20 @@ public class MarshmallowController
 			System.out.println("I want a new name for a monster, type one please! (p_p)");
 			String newMonsterName = monsterScanner.next();
 			sydoMonster.setMonsterName(newMonsterName);
+			
+			System.out.println("How many eyes should I have?");
+			int updatedEyes = monsterScanner.nextInt();
+			sydoMonster.setMonsterEyes(updatedEyes);
+			System.out.println("How many noses should I have?");
+			int updatedNoses = monsterScanner.nextInt();
+			sydoMonster.setMonsterNoses(updatedNoses);
+			System.out.println("How many legs?");
+			double updatedLegs = monsterScanner.nextDouble();
+			System.out.println("How much hair?");
+			double updatedHair = monsterScanner.nextDouble();
+			System.out.println("Should I have a belly button? True or False.");
+			boolean updatedBellyButton = monsterScanner.nextBoolean();
+			
+			
 		}
 }
