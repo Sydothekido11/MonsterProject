@@ -55,8 +55,6 @@ public class MarshmallowMonster
 			return monsterBellyButton;
 		}
 		
-		
-		
 		public void setMonsterName(String monsterName)
 		{
 			this.monsterName = monsterName;
