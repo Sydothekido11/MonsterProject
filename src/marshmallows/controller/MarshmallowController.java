@@ -7,7 +7,8 @@ import java.util.Scanner;
 
 public class MarshmallowController
 {
-	private MarshmallowMonster sydoMonster;
+	private MarshmallowMonster sydoMonster; //Declares a Monster called sydoMonster.
+	private MarshmallowMonster userMonster;
 	private MonsterDisplay myDisplay;
 	private Scanner monsterScanner;
 	
@@ -29,11 +30,13 @@ public class MarshmallowController
 	public void start()
 		{
 			myDisplay.displayInfo(sydoMonster.toString());
-			askQuestions();
-			myDisplay.displayInfo("Updated monster info: " + sydoMonster.toString());
+			createUserMonster();
+			myDisplay.displayInfo("Updated monster info: " + userMonster.toString());
 		}
 	
 		private void askQuestions()
+
+
 		{
 			System.out.println("I want a new name for a monster, type one please! (p_p)");
 			String newMonsterName = monsterScanner.next();
@@ -51,6 +54,34 @@ public class MarshmallowController
 			double updatedHair = monsterScanner.nextDouble();
 			System.out.println("Should I have a belly button? True or False.");
 			boolean updatedBellyButton = monsterScanner.nextBoolean();
+			
+			
+		}
+
+		/**
+		 * Creates a MarshmallowMonster instance from user input.
+		 */
+		private void createUserMonster()
+		{
+			//Step One: Gather user information.
+			System.out.println("What is your monsters name? boop.");
+			String userName;
+			userName = monsterScanner.nextLine();
+			System.out.println("How many legs will it have? This is a decimal value. meep.");
+			double userLegs = monsterScanner.nextDouble();
+			System.out.print("How much hair does it have? Another decimal please. beep.");
+			double userHair;
+			userHair = monsterScanner.nextDouble();
+			System.out.println("Does it have a belly button? True or False. blep.");
+			boolean hasBellyButton = monsterScanner.nextBoolean();
+			System.out.println("Number of eyes on the monster. pepe");
+			int userEyes = monsterScanner.nextInt();
+			System.out.println("How many noses? sqwoop.");
+			int userNoses = monsterScanner.nextInt();
+			
+			//Step two: Build the monster using the constructor.
+			userMonster = new MarshmallowMonster(userName, userEyes, hasBellyButton, userNoses, userLegs, userHair);
+			
 			
 			
 		}
